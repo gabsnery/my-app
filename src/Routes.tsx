@@ -22,30 +22,7 @@ const AppRoutes = () => {
   return (
     <Suspense fallback={<div>carregando</div>}>
       <Routes>
-        <Route path="/admin/product"  element={<PrivateRoute admin={true} path="/login" />}>
-          <Route path="/admin/product" element={<ProdAdm />} />
-        </Route>
-        <Route path="/" element={<PrivateRoute both path="/login" />}>
-          <Route path="/" element={<Home />} />
-        </Route>
-        <Route path="/login" element={<PrivateRoute unprivate path="/login" />}>
-          <Route path="/login" element={<Login />} />
-        </Route>
-        <Route path="/store" element={<PrivateRoute both />}>
-          <Route path="/store" element={<Products />} />
-        </Route>
-        <Route path="/cart" element={<PrivateRoute both />}>
-          <Route path="/cart" element={<Cart />} />
-        </Route>
-        <Route path="/close-order" element={<PrivateRoute both />}>
-          <Route path="/close-order" element={<CloseOrder />} />
-        </Route>
-        <Route path="/product/:id" element={<PrivateRoute both />}>
-          <Route path="/product/:id" element={<Product />} />
-        </Route>
-        <Route path="/admin" element={<PrivateRoute admin />}>
-          <Route path="/admin" element={<Admin />} />
-        </Route>
+          <Route path="/" element={<ProdAdm />} />
       </Routes>
     </Suspense>
   );
