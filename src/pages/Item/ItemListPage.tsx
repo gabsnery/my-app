@@ -1,7 +1,6 @@
-import ItemList from "@components/item/form"
+import ItemList from "components/item/form";
+import React from "react";
 
-const ItemListPage = () =>{
+export const ItemListPage: React.FC<{}> = () => {
     return <ItemList/>
-}
-
-export default ItemListPage;
+} 

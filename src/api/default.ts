@@ -4,14 +4,14 @@ import {
 } from '@reduxjs/toolkit/query/react'
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: process.env.VITE_REACT_APP_API_URL,
+  baseUrl: process.env.REACT_APP_API_BASE_URL,
   prepareHeaders: (headers, { getState }) => {
-    const {
+/*     const {
       auth: { accessToken }
     } = getState() as any
     if (accessToken) {
       headers.set('Authorization', `Bearer ${accessToken}`)
-    }
+    } */
     return headers
   }
 })
@@ -23,3 +23,4 @@ export const defaultApi = createApi({
   baseQuery: baseQuery,
   endpoints: () => ({})
 })
+
